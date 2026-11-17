@@ -1,27 +1,54 @@
-# Kartikey Sharma — Premium Light Developer Portfolio
+# Kartikey Sharma — Portfolio
 
-A fast, accessible, single-page **HTML, CSS and vanilla JavaScript** developer portfolio (no framework dependency, no build step).
+A handcrafted editorial-style **light-theme developer portfolio** in plain HTML, CSS and JavaScript.
 
-## Site highlights
-- Responsive editorial cream/white design, animated hero browser mockup and floating callouts
-- Three featured projects and verified GitHub source links
-- Experience timeline, skills, contact, portfolio-friendly SEO and custom favicon
-- Scroll-reveal animations, reading progress, active navigation, mobile menu, copy-email feedback
-- Accessible links/buttons with reduced-motion support
-- Local resume PDF embedded at `resume.pdf`
+**Designed for:** Next.js full-stack job applications and one-page ATS resume.
 
-**Local preview:** open `index.html` in a browser, or run `python -m http.server 5500` and navigate to http://localhost:5500.
+## Features
 
-## GitHub Pages publishing
+- Responsive portfolio with custom hero, product mockups, professional timeline and accessibility-conscious motion
+- Keyboard-accessible, deep-linkable project selector modal
+- **Two interactive browser previews:** sales analytics and ERP inventory; data persists in the current browser through localStorage
+- A third AI Document Assistant (source-only prototype)
+- Downloadable resume PDF
+- No JS frameworks or build tooling needed for portfolio hosting
 
-1. Repo: https://github.com/007kart/Portfolio
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, branch **main**, folder **/(root)**; save.
-4. Once deployment succeeds, visit **https://007kart.github.io/Portfolio/**.
-5. Add the live website link to your resume. A repository URL is not a substitute for the live Pages URL.
+## Important: live previews vs. full-stack deployment
 
-> A successful git push does not itself guarantee that GitHub Pages is enabled. Use the repository Pages settings and check the published URL.
+The demos at `/demos/ecommerce/` and `/demos/erp/` are **interactive browser-only previews using synthetic data**. CRUD operations, filters, report export and dashboard state run locally in JavaScript. They **do not call PostgreSQL**.
 
-The E-Commerce and ERP repositories contain **Node.js/Next.js server-side APIs** and **PostgreSQL**. They require server-capable hosting; **GitHub Pages serves only this static portfolio**, not those full-stack projects.
+Each linked GitHub repository contains a separate **Next.js + JavaScript + PostgreSQL** application with server-side APIs. To show recruiters a fully deployed database-backed app, that Next.js repository still needs hosting on Vercel / Railway / Render and a hosted PostgreSQL database. When deployed, update `script.js` `demo` URLs to the real application URLs; leave the GitHub `repo` URLs unchanged.
 
-The preview project illustrations and mock numbers in this portfolio are **illustrative**; actual backend demo data is synthetic.
+## Project deep links (for resume PDF)
+
+- E-Commerce: `https://007kart.github.io/Portfolio/?project=ecommerce`
+- ERP Inventory: `https://007kart.github.io/Portfolio/?project=erp`
+- AI prototype: `https://007kart.github.io/Portfolio/?project=ai`
+
+Visiting a deep link opens the project selector. Recruiters can choose either **Launch interactive demo** or **View GitHub source code**.
+
+## Getting the portfolio live on GitHub Pages
+
+GitHub repository: `https://github.com/007kart/Portfolio`
+
+1. Go to repository **Settings → Pages**.
+2. Under *Build and deployment*, choose **Deploy from a branch**.
+3. Select branch **main**, folder **/(root)**, then **Save**.
+4. Confirm successful publishing at `https://007kart.github.io/Portfolio/` and verify the project deep links.
+
+If Pages is not enabled, the resume's portfolio and project links cannot work until it is published.
+
+## Local use
+
+Run `python3 -m http.server 8000` in this repository, then open `http://localhost:8000`. The demo pages require no API key or database.
+
+## File map
+
+- `index.html`, `styles.css`, `script.js`: portfolio and project selector
+- `demos/ecommerce/index.html`: CommercePulse preview
+- `demos/erp/index.html`: StockPilot preview
+- `demo.css`, `demo.js`: shared interactive preview engine
+- `resume.pdf`: resume PDF
+- `favicon.svg`: icon
+
+Everything showcased as sample data uses synthetic records; no employer or client information is included.
