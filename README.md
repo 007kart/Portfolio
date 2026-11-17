@@ -1,30 +1,27 @@
-# Kartikey Sharma — Full Stack Developer Portfolio
+# Kartikey Sharma — Premium Light Developer Portfolio
 
-A responsive, accessible, dependency-free portfolio website built with **HTML, CSS and vanilla JavaScript**. Intended for sharing with recruiters and placing on a resume.
+A fast, accessible, single-page **HTML, CSS and vanilla JavaScript** developer portfolio (no framework dependency, no build step).
 
-## What is included
-- Full Stack Developer introduction, backend and data skills, and current AI-learning focus
-- Three **independent portfolio projects** linked to real GitHub repositories
-- Work history with Delta Infosoft and prior analytics/review roles
-- Contact email and GitHub account
-- Responsive phone / desktop layouts, project filters, accessible keyboard navigation
-- Lightweight static files — no API keys, databases, hosting costs, or build tools
+## Site highlights
+- Responsive editorial cream/white design, animated hero browser mockup and floating callouts
+- Three featured projects and verified GitHub source links
+- Experience timeline, skills, contact, portfolio-friendly SEO and custom favicon
+- Scroll-reveal animations, reading progress, active navigation, mobile menu, copy-email feedback
+- Accessible links/buttons with reduced-motion support
+- Local resume PDF embedded at `resume.pdf`
 
-## Run locally
-Simply open `index.html` in a browser. No install required.
+**Local preview:** open `index.html` in a browser, or run `python -m http.server 5500` and navigate to http://localhost:5500.
 
-## Publish with GitHub Pages
-1. Upload the `index.html`, `styles.css`, `script.js`, and `favicon.svg` files to the root of a GitHub repository (for example, `007kart/Portfolio`).
-2. Go to repository **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**, then **main / (root)**, and save.
-4. Once GitHub Pages confirms the deployment, verify the live URL. For the `Portfolio` repository, the expected URL is `https://007kart.github.io/Portfolio/` (only after Pages is enabled).
-5. Put the verified live URL in your resume's header as **Portfolio**.
+## GitHub Pages publishing
 
-## Accurate presentation
-The E-Commerce and ERP projects are independently created **portfolio demos using synthetic data**, not client code. AI Document Assistant is an **early-stage RAG prototype**, not a production AI system. Project illustrations are decorative mockups; they are not screenshots of live deployed products. No quantitative performance or client claims are made here.
+1. Repo: https://github.com/007kart/Portfolio
+2. Go to **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**, branch **main**, folder **/(root)**; save.
+4. Once deployment succeeds, visit **https://007kart.github.io/Portfolio/**.
+5. Add the live website link to your resume. A repository URL is not a substitute for the live Pages URL.
 
-## Customize before publishing
-- Verify contact email and work descriptions.
-- Add a verified LinkedIn URL if desired.
-- Add live demo links only after actually deploying the projects.
-- Do not upload secrets or confidential employer assets.
+> A successful git push does not itself guarantee that GitHub Pages is enabled. Use the repository Pages settings and check the published URL.
+
+The E-Commerce and ERP repositories contain **Node.js/Next.js server-side APIs** and **PostgreSQL**. They require server-capable hosting; **GitHub Pages serves only this static portfolio**, not those full-stack projects.
+
+The preview project illustrations and mock numbers in this portfolio are **illustrative**; actual backend demo data is synthetic.

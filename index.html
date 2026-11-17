@@ -3,109 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a1018">
-  <meta name="description" content="Kartikey Sharma — Full Stack Developer building web applications with Next.js, React, FastAPI, Python, PostgreSQL and a growing focus on AI product engineering.">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta name="description" content="Kartikey Sharma — Next.js Full Stack Developer based in Ahmedabad, India. Exploring thoughtful products, clean interfaces, APIs and modern web engineering.">
+  <meta property="og:title" content="Kartikey Sharma | Next.js Full Stack Developer">
+  <meta property="og:description" content="Building thoughtful web experiences with Next.js, JavaScript, React & PostgreSQL.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Kartikey Sharma | Full Stack Developer">
-  <meta property="og:description" content="Full-stack engineering, thoughtful product development, and AI-powered portfolio projects.">
-  <title>Kartikey Sharma | Full Stack Developer</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+  <title>Kartikey Sharma — Full Stack Developer</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="Kartikey Sharma, back to top"><span class="brand-mark">K<span class="brand-dot">.</span></span><span class="brand-text">kartikey<span class="brand-muted">/dev</span></span></a>
-      <div class="nav-links">
-        <a href="#work">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#journey">Experience</a>
-        <a href="#contact">Contact</a>
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+  <div class="page-grain" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="wordmark" href="#top" aria-label="Kartikey Sharma homepage"><span class="mark">K<span>.</span></span><span class="wordmark-caption">KARTIKEY SHARMA<span>— PORTFOLIO 2026</span></span></a>
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle navigation"><span></span><span></span></button>
+      <div class="nav-links" id="site-nav-links">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#expertise">Expertise</a>
+        <a class="nav-link" href="#work">Experience</a>
+        <a class="nav-link" href="#projects">Projects</a>
       </div>
-      <a class="nav-cta" href="mailto:kartikeys43@gmail.com">Let's connect <span aria-hidden="true">↗</span></a>
+      <a class="nav-contact" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
-
-  <main id="main">
-    <section id="top" class="hero container" aria-labelledby="hero-heading">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse" aria-hidden="true"></span> FULL STACK DEVELOPER <span class="eyebrow-separator">/</span> AHMEDABAD, INDIA</div>
-        <h1 id="hero-heading">Building software<br>that <span class="highlight">makes sense.</span></h1>
-        <p class="hero-lead">I'm <strong>Kartikey Sharma</strong> — a full-stack developer working across intuitive interfaces, reliable APIs, and well-structured data. Currently exploring how to bring <span class="inline-highlight">AI into real products</span>, not just demos.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#work">Explore my work <span aria-hidden="true">↗</span></a>
-          <a class="button button-outline" href="https://github.com/007kart" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="hero-notes"><span><span class="mini-dot" aria-hidden="true"></span> Next.js &amp; React</span><span><span class="mini-dot" aria-hidden="true"></span> Python &amp; FastAPI</span><span><span class="mini-dot" aria-hidden="true"></span> SQL &amp; PostgreSQL</span></div>
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="eyebrow-line"></span> FULL STACK WEB ENGINEER <span class="eyebrow-star">✳</span> AHMEDABAD, INDIA</div>
+        <h1 id="hero-title">I build web<br>experiences<br>that <em>make sense<span class="period">.</span></em></h1>
+        <p class="hero-description">Hello, I'm <strong>Kartikey</strong> — a software developer who turns complex workflows into simple, useful digital products. My focus is <strong>Next.js, React, JavaScript, REST APIs</strong> and <strong>PostgreSQL</strong>.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span class="button-arrow" aria-hidden="true">↗</span></a><a class="button button-secondary" href="./resume.pdf" target="_blank" rel="noreferrer">View resume <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-bottom"><div class="availability"><i></i> OPEN TO RELEVANT OPPORTUNITIES</div><div class="scroll-hint">SCROLL TO EXPLORE <span>↓</span></div></div>
       </div>
-      <div class="hero-visual" aria-label="Illustration of a full stack application architecture">
-        <div class="visual-topline"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>architecture.ts</span><span class="visual-live"><span aria-hidden="true">●</span> portfolio</span></div>
-        <div class="visual-title">From idea to production</div>
-        <p class="visual-subtitle">The layers I enjoy working across.</p>
-        <div class="architecture">
-          <div class="architecture-row"><span class="architecture-number">01</span><div><span class="layer-label">INTERFACE</span><strong>Next.js / React</strong></div><span class="layer-status">UI / UX</span></div>
-          <div class="connection-line" aria-hidden="true"><span></span></div>
-          <div class="architecture-row"><span class="architecture-number">02</span><div><span class="layer-label">API &amp; BUSINESS LOGIC</span><strong>Python / FastAPI</strong></div><span class="layer-status">BACKEND</span></div>
-          <div class="connection-line" aria-hidden="true"><span></span></div>
-          <div class="architecture-row"><span class="architecture-number">03</span><div><span class="layer-label">DATA LAYER</span><strong>SQL / PostgreSQL</strong></div><span class="layer-status">STORAGE</span></div>
-          <div class="connection-line" aria-hidden="true"><span></span></div>
-          <div class="architecture-row ai-row"><span class="architecture-number">04</span><div><span class="layer-label">WHAT I'M EXPLORING</span><strong>LLMs / RAG / AI APIs</strong></div><span class="layer-status accent-status">AI</span></div>
-        </div>
-        <div class="visual-footer"><span><span class="square-symbol" aria-hidden="true">▣</span> build · test · iterate</span><span>v1.0</span></div>
-      </div>
-      <div class="hero-scroll" aria-hidden="true">SCROLL TO EXPLORE <span>↓</span></div>
-    </section>
-
-    <section id="work" class="section projects-section" aria-labelledby="work-heading">
-      <div class="container">
-        <div class="section-heading"><div><p class="section-kicker">01 / SELECTED WORK</p><h2 id="work-heading">Projects built to <em>solve</em>.</h2><p class="section-intro">Three independent portfolio projects — with real code, clear scope, and honest descriptions of what's implemented.</p></div><a class="text-link" href="https://github.com/007kart?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories <span aria-hidden="true">↗</span></a></div>
-        <div class="project-filters" aria-label="Filter projects"><button class="filter active" type="button" data-filter="all" aria-pressed="true">All projects <span>03</span></button><button class="filter" type="button" data-filter="fullstack" aria-pressed="false">Full stack</button><button class="filter" type="button" data-filter="ai" aria-pressed="false">AI exploration</button></div>
-        <div class="projects-grid">
-          <article class="project-card" data-category="fullstack">
-            <div class="project-cover ecommerce-cover" aria-hidden="true"><div class="mock-header"><span></span><span></span><span></span><i>commerce / insights</i></div><div class="mock-graph"><div class="mock-metric"><small>REVENUE OVERVIEW</small><b>Analytics</b><span class="mock-trend">↗ Trends &amp; reports</span></div><div class="bar-chart"><i style="height:32%"></i><i style="height:48%"></i><i style="height:41%"></i><i style="height:66%"></i><i style="height:58%"></i><i style="height:78%"></i><i style="height:69%"></i><i style="height:88%"></i></div></div></div>
-            <div class="project-body"><div class="project-meta"><span>01 / FULL STACK</span><span class="project-label">PORTFOLIO DEMO</span></div><h3>E-Commerce Analytics Portal</h3><p>A dashboard for exploring synthetic order data: sales KPIs, transaction filters, top products, and CSV reporting through a Python API.</p><div class="tech-list"><span>Next.js</span><span>FastAPI</span><span>SQL</span><span>PostgreSQL</span></div><a class="project-link" href="https://github.com/007kart/E-Commerce-Analytics-Portal" target="_blank" rel="noopener noreferrer" aria-label="View E-Commerce Analytics Portal source on GitHub">View source code <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-card" data-category="fullstack">
-            <div class="project-cover erp-cover" aria-hidden="true"><div class="mock-header"><span></span><span></span><span></span><i>operations / inventory</i></div><div class="inventory-view"><div class="inventory-title"><span>INVENTORY</span><b>Stock overview</b></div><div class="inventory-item"><span class="inventory-icon">◫</span><span>Product inventory</span><i class="ok-tag">Available</i></div><div class="inventory-item"><span class="inventory-icon">▤</span><span>Warehouse supplies</span><i class="warn-tag">Low stock</i></div><div class="inventory-item"><span class="inventory-icon">◪</span><span>Reorder tracking</span><i class="ok-tag">Updated</i></div></div></div>
-            <div class="project-body"><div class="project-meta"><span>02 / FULL STACK</span><span class="project-label">PORTFOLIO DEMO</span></div><h3>ERP Inventory &amp; Reporting</h3><p>A sample inventory workflow with stock management, low-stock visibility, reporting views, and CSV exports for operational teams.</p><div class="tech-list"><span>Next.js</span><span>React</span><span>FastAPI</span><span>PostgreSQL</span></div><a class="project-link" href="https://github.com/007kart/ERP-Inventory-Reporting-Modul" target="_blank" rel="noopener noreferrer" aria-label="View ERP Inventory Reporting Module source on GitHub">View source code <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="project-card ai-card" data-category="ai">
-            <div class="project-cover ai-cover" aria-hidden="true"><div class="mock-header"><span></span><span></span><span></span><i>documents / assistant</i></div><div class="ai-bubble bubble-question">What does this document say?</div><div class="ai-bubble bubble-response"><span class="ai-spark">✳</span><div><small>DOCUMENT-BASED ANSWER</small><b>Relevant context, cited sources.</b><i></i><i></i><i class="short-line"></i></div></div></div>
-            <div class="project-body"><div class="project-meta"><span>03 / AI + FULL STACK</span><span class="project-label">STARTER PROTOTYPE</span></div><h3>AI Document Assistant</h3><p>An LLM/RAG prototype exploring text extraction, embeddings, pgvector-based retrieval, and document-grounded Q&amp;A.</p><div class="tech-list"><span>Next.js</span><span>Python</span><span>OpenAI API</span><span>pgvector</span></div><a class="project-link" href="https://github.com/007kart/ai-document-assistant" target="_blank" rel="noopener noreferrer" aria-label="View AI Document Assistant source on GitHub">View source code <span aria-hidden="true">↗</span></a></div>
-          </article>
-        </div>
-        <p class="project-disclaimer">Projects are independent portfolio implementations with demo data; not employer-owned source code. Links point to code repositories, not deployed demos.</p>
+      <div class="hero-art reveal" aria-label="Creative illustration of a web development dashboard">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><span class="hero-decoration decor-a">✳</span><span class="hero-decoration decor-b">+</span>
+        <div class="art-note art-note-one"><span class="note-icon">✷</span><div>DESIGN × CODE<small>Thoughtful by default</small></div></div>
+        <div class="device-card" id="device-card"><div class="device-chrome"><span class="chrome-dot red"></span><span class="chrome-dot yellow"></span><span class="chrome-dot green"></span><span class="device-chrome-label">portfolio / workspace</span><span class="chrome-options">•••</span></div>
+          <div class="device-inside"><div class="device-top"><div><small>WORKSPACE / OVERVIEW</small><strong>Good morning, Kartikey <span>✳</span></strong></div><span class="tiny-avatar">KS</span></div><div class="mini-kpis"><div><span>Components</span><b>Reusable</b><i class="green-indicator">●</i></div><div><span>API layer</span><b>RESTful</b><i>↗</i></div></div><div class="device-chart"><div class="mini-chart-title">Performance overview <span>↗</span></div><svg viewBox="0 0 410 160" preserveAspectRatio="none" role="img" aria-label="Illustrative blue area chart"><defs><linearGradient id="art-chart" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#8da4fb" stop-opacity=".34"/><stop offset="100%" stop-color="#8da4fb" stop-opacity="0"/></linearGradient></defs><path d="M0 55H410M0 100H410M0 146H410" fill="none" stroke="#e9eaf5"/><path d="M0 125 C43 125 50 82 98 96 S157 132 207 69 S262 77 312 50 S371 76 410 18 L410 160H0Z" fill="url(#art-chart)"/><path d="M0 125 C43 125 50 82 98 96 S157 132 207 69 S262 77 312 50 S371 76 410 18" fill="none" stroke="#6766df" stroke-width="3.5" stroke-linecap="round"/></svg></div><div class="device-pills"><span><i></i> Next.js</span><span><i></i> PostgreSQL</span><span><i></i> REST APIs</span></div></div>
+        </div><div class="art-note art-note-two"><span class="note-icon purple">{ }</span><div>BUILD • SHIP • REFINE<small>Frontend to database</small></div></div>
       </div>
     </section>
-
-    <section id="skills" class="section skills-section" aria-labelledby="skills-heading">
-      <div class="container skills-layout">
-        <div class="skills-intro"><p class="section-kicker">02 / THE TOOLKIT</p><h2 id="skills-heading">A builder's<br><em>toolbox.</em></h2><p>I enjoy working through the entire application lifecycle — from responsive UI and API design to data workflows, testing, and deployment.</p><div class="skills-note"><span class="skills-note-icon">✳</span><p><strong>Currently learning:</strong> LLM integrations, retrieval-augmented generation, evaluation, and production AI patterns.</p></div></div>
-        <div class="skills-cards">
-          <div class="skill-group"><div class="skill-icon">{ }</div><div><h3>Frontend development</h3><p>Next.js · React · TypeScript · JavaScript · Tailwind CSS · HTML / CSS</p></div></div>
-          <div class="skill-group"><div class="skill-icon">⌘</div><div><h3>Backend &amp; APIs</h3><p>Python · FastAPI · Flask · REST APIs · Microservices · API testing</p></div></div>
-          <div class="skill-group"><div class="skill-icon">▤</div><div><h3>Data &amp; databases</h3><p>SQL · PostgreSQL · DBeaver · Schema design · Reporting queries</p></div></div>
-          <div class="skill-group"><div class="skill-icon">↗</div><div><h3>Delivery &amp; workflow</h3><p>Docker · AWS basics · Git / GitHub · CI/CD · Linux · Postman</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="journey" class="section journey-section" aria-labelledby="journey-heading">
-      <div class="container"><div class="section-heading"><div><p class="section-kicker">03 / MY BACKGROUND</p><h2 id="journey-heading">Experience that <em>connects</em>.</h2><p class="section-intro">Software engineering informed by earlier work with data, analytical workflows, and careful document review.</p></div></div>
-      <div class="timeline">
-        <div class="timeline-item"><div class="timeline-date">MAR 2026 — PRESENT</div><div class="timeline-marker" aria-hidden="true"></div><div class="timeline-info"><div class="timeline-role">Software Developer <span class="current-pill">CURRENT</span></div><div class="timeline-company">Delta Infosoft Pvt. Ltd. <span>· Ahmedabad, Gujarat</span></div><p>Working on full-stack application modules, Next.js interfaces, Python API integrations, and SQL/PostgreSQL-based data workflows.</p></div></div>
-        <div class="timeline-item"><div class="timeline-date">PREVIOUS ROLE</div><div class="timeline-marker" aria-hidden="true"></div><div class="timeline-info"><div class="timeline-role">Cyber Review Analyst</div><div class="timeline-company">Epiq Global</div><p>Reviewed document collections for sensitive-data categories and contributed to structured reporting in compliance-related workflows.</p></div></div>
-        <div class="timeline-item"><div class="timeline-date">PREVIOUS ROLE</div><div class="timeline-marker" aria-hidden="true"></div><div class="timeline-info"><div class="timeline-role">Cyber Data Analyst</div><div class="timeline-company">UnitedLex</div><p>Worked with Python, SQL, data validation and reporting workflows across structured business data.</p></div></div>
-      </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section" aria-labelledby="contact-heading"><div class="container"><div class="contact-panel"><div class="contact-decor" aria-hidden="true">&lt;/&gt;</div><p class="section-kicker">04 / NEXT STEP</p><h2 id="contact-heading">Let's build something <em>useful.</em></h2><p>Open to connecting about full-stack engineering, backend development, and teams building thoughtful AI-enabled products.</p><div class="contact-buttons"><a class="button button-primary" href="mailto:kartikeys43@gmail.com?subject=Let's%20connect%20%E2%80%94%20portfolio">Send an email <span aria-hidden="true">↗</span></a><a class="button button-outline" href="https://github.com/007kart" target="_blank" rel="noopener noreferrer">See GitHub <span aria-hidden="true">↗</span></a></div><div class="contact-email">kartikeys43@gmail.com <button id="copy-email" type="button" aria-label="Copy email address">Copy <span aria-hidden="true">↗</span></button></div></div></div></section>
+    <section class="ticker" aria-label="Focus technologies"><div class="ticker-track" aria-hidden="true"><span>NEXT.JS</span><i>✳</i><span>JAVASCRIPT</span><i>✳</i><span>REACT</span><i>✳</i><span>TYPESCRIPT</span><i>✳</i><span>POSTGRESQL</span><i>✳</i><span>REST APIS</span><i>✳</i><span>NEXT.JS</span><i>✳</i><span>JAVASCRIPT</span><i>✳</i><span>REACT</span><i>✳</i><span>TYPESCRIPT</span><i>✳</i><span>POSTGRESQL</span><i>✳</i><span>REST APIS</span><i>✳</i></div></section>
+    <section id="about" class="about section container"><div class="section-heading reveal"><div class="section-overline"><span>01 / ABOUT ME</span><span class="small-star">✳</span></div><h2>Technology should feel<br><em>intuitive.</em> That's the goal.</h2></div><div class="about-grid"><div class="about-mark reveal"><span>KS<span>.</span></span><small>CURIOUS BY NATURE<br>ENGINEER BY PRACTICE</small></div><div class="about-body reveal"><p class="lead">I'm a Full Stack Software Developer working at <strong>Delta Infosoft Pvt. Ltd.</strong> in Ahmedabad.</p><p>I enjoy taking ideas from wireframes to working applications — building structured interfaces, connecting API workflows, designing SQL-backed reports, and improving everyday product experiences.</p><p>My professional toolkit is centered on <strong>Next.js, React, JavaScript, TypeScript, SQL and PostgreSQL</strong>. I also have familiarity with Python, and I'm exploring practical AI integrations through portfolio work.</p><div class="about-links"><a href="https://github.com/007kart" target="_blank" rel="noreferrer">Explore my GitHub <span>↗</span></a><a href="mailto:kartikeys43@gmail.com">Let's collaborate <span>↗</span></a></div></div></div></section>
+    <section id="expertise" class="expertise section"><div class="container"><div class="section-heading reveal"><div class="section-overline"><span>02 / MY EXPERTISE</span><span class="small-star">✳</span></div><h2>The right tools.<br><em>For the right problems.</em></h2><p>A practical, product-first stack built around modern web development.</p></div><div class="expertise-grid"><article class="expertise-card reveal"><span class="expertise-num">01</span><div class="expertise-icon">◫</div><h3>Frontend engineering</h3><p>Fast, intuitive interfaces built with reusable React components and thoughtful responsive design.</p><div class="skill-tags"><span>Next.js</span><span>React</span><span>JavaScript</span><span>TypeScript</span><span>CSS</span></div></article><article class="expertise-card reveal"><span class="expertise-num">02</span><div class="expertise-icon">⌘</div><h3>Backend & APIs</h3><p>Building full-stack application flows through server endpoints, validation and reliable API integrations.</p><div class="skill-tags"><span>Next.js Route Handlers</span><span>Node.js</span><span>REST APIs</span><span>JSON</span></div></article><article class="expertise-card reveal"><span class="expertise-num">03</span><div class="expertise-icon">▤</div><h3>Data & delivery</h3><p>Relational data modeling, reports, query workflows and development practices that help projects ship.</p><div class="skill-tags"><span>SQL</span><span>PostgreSQL</span><span>DBeaver</span><span>Git</span><span>Docker</span></div></article></div></div></section>
+    <section id="work" class="experience section container"><div class="section-heading reveal"><div class="section-overline"><span>03 / PROFESSIONAL JOURNEY</span><span class="small-star">✳</span></div><h2>Experience that<br><em>informs how I build.</em></h2></div><div class="timeline"><article class="experience-item reveal"><div class="timeline-index"><span>01</span><i></i></div><div class="timeline-role"><h3>Software Developer</h3><p>Delta Infosoft Pvt. Ltd.</p></div><div class="timeline-meta"><span class="current-status"><i></i> Present</span><span>Ahmedabad, Gujarat</span></div><p class="timeline-description">Building responsive Next.js interfaces, working with API-integrated workflows and SQL-backed operational data, and supporting application development and delivery.</p></article><article class="experience-item reveal"><div class="timeline-index"><span>02</span><i></i></div><div class="timeline-role"><h3>Cyber Data Analyst</h3><p>UnitedLex</p></div><div class="timeline-meta"><span>Previous role</span><span>Gurugram, India</span></div><p class="timeline-description">Worked with structured data, SQL queries, reporting systems and client-focused information processing workflows.</p></article><article class="experience-item reveal"><div class="timeline-index"><span>03</span><i></i></div><div class="timeline-role"><h3>Cyber Review Analyst</h3><p>Epiq Global</p></div><div class="timeline-meta"><span>Previous role</span><span>Remote · India</span></div><p class="timeline-description">Reviewed data-breach documents, organized information categories and prepared structured findings for compliance workflows.</p></article></div></section>
+    <section id="projects" class="projects section"><div class="container"><div class="projects-header reveal"><div class="section-heading"><div class="section-overline"><span>04 / SELECTED WORK</span><span class="small-star">✳</span></div><h2>Things I've<br><em>built & explored.</em></h2></div><p>Hands-on portfolio applications focused on full-stack architecture, real workflows and clean interfaces. The projects below use synthetic demo data.</p></div>
+      <div class="projects-grid"><article class="project-card project-ecommerce reveal" data-tilt><div class="project-visual"><div class="mock-browser"><div class="mock-browser-top"><span class="mock-dots">● ● ●</span><span>commercepulse / analytics</span></div><div class="mock-browser-inner"><div class="mock-small-label">SALES OVERVIEW</div><div class="mock-metric-row"><div><small>REVENUE</small><b>₹ 5.28L</b><span class="mock-trend">↗ ANALYTICS</span></div><div><small>ORDERS</small><b>240</b><span>DEMO DATA</span></div><div><small>CUSTOMERS</small><b>24</b><span>TRACKING</span></div></div><div class="mock-chart"><svg viewBox="0 0 430 130" preserveAspectRatio="none"><path d="M0 105 C50 80 60 105 100 67 S170 96 205 60 S280 70 310 35 S390 60 430 12" fill="none" stroke="#7974ee" stroke-width="4"/><path d="M0 105 C50 80 60 105 100 67 S170 96 205 60 S280 70 310 35 S390 60 430 12V130H0Z" fill="#edeaff" opacity=".65"/></svg></div></div></div><div class="project-visual-label">01 / E-COMMERCE</div></div><div class="project-content"><div class="project-caption">FULL-STACK WEB APPLICATION <span>↗ 01</span></div><h3>E-Commerce Analytics Portal</h3><p>A complete commerce analytics dashboard with searchable orders, revenue KPIs, product reporting, transactional order creation and CSV export.</p><div class="project-tags"><span>Next.js</span><span>JavaScript</span><span>PostgreSQL</span><span>REST APIs</span></div><a class="project-link" href="https://github.com/007kart/E-Commerce-Analytics-Portal" target="_blank" rel="noreferrer">View source & README <span>↗</span></a></div></article>
+        <article class="project-card project-erp reveal" data-tilt><div class="project-visual"><div class="mock-browser erp-mock"><div class="mock-browser-top"><span class="mock-dots">● ● ●</span><span>stockpilot / inventory</span></div><div class="mock-browser-inner"><div class="mock-small-label">INVENTORY DASHBOARD</div><div class="erp-headline"><span>Stock health</span><strong>94.2%</strong></div><div class="erp-progress"><span></span></div><div class="erp-list"><div><i>◈</i><span>Wireless Keyboard</span><b>38 units</b></div><div><i>◈</i><span>USB-C Adapter</span><b>92 units</b></div><div><i>◈</i><span>Office Supplies</span><b>67 units</b></div></div></div></div><div class="project-visual-label">02 / OPERATIONS</div></div><div class="project-content"><div class="project-caption">FULL-STACK ERP MODULE <span>↗ 02</span></div><h3>ERP Inventory & Reporting</h3><p>A stock management system with low-stock warnings, inventory adjustments, movement history, suppliers and exportable reporting.</p><div class="project-tags"><span>Next.js</span><span>JavaScript</span><span>SQL</span><span>PostgreSQL</span></div><a class="project-link" href="https://github.com/007kart/ERP-Inventory-Reporting-Modul" target="_blank" rel="noreferrer">View source & README <span>↗</span></a></div></article>
+        <article class="project-card project-ai reveal" data-tilt><div class="project-visual"><div class="ai-visual"><div class="ai-chip">AI EXPERIMENT / PROTOTYPE</div><div class="ai-document"><span class="ai-doc-lines">≡</span><div><strong>Upload a document</strong><small>Ask questions. Find context.</small></div><span class="ai-doc-arrow">↗</span></div><div class="ai-message">“What are the key findings?” <span>✳</span></div><div class="ai-message ai-reply"><i>✦</i> Answer grounded in retrieved text…</div></div><div class="project-visual-label">03 / EXPLORATION</div></div><div class="project-content"><div class="project-caption">AI APPLICATION PROTOTYPE <span>↗ 03</span></div><h3>AI Document Assistant</h3><p>A learning prototype exploring document upload, retrieval-augmented generation and contextual question-answering. Not a production deployment.</p><div class="project-tags"><span>Next.js</span><span>RAG</span><span>LLM APIs</span><span>PostgreSQL</span></div><a class="project-link" href="https://github.com/007kart/ai-document-assistant" target="_blank" rel="noreferrer">Explore prototype <span>↗</span></a></div></article>
+      </div><div class="more-work reveal"><p>Want to explore more code and learning experiments?</p><a href="https://github.com/007kart" target="_blank" rel="noreferrer">Browse my GitHub <span>↗</span></a></div>
+    </div></section>
+    <section class="approach section container"><div class="approach-banner reveal"><div class="approach-orb" aria-hidden="true">✳</div><div class="eyebrow">HOW I APPROACH MY WORK</div><h2>Make it useful.<br>Make it clear.<br><em>Make it last.</em></h2><p>I care about practical engineering, understandable interfaces, and products that solve the problem in front of them.</p><a class="button button-inverted" href="#contact">Start a conversation <span>↗</span></a></div></section>
+    <section id="contact" class="contact section container"><div class="contact-heading reveal"><div class="section-overline"><span>05 / GET IN TOUCH</span><span class="small-star">✳</span></div><h2>Have a project<br>or an opportunity?<br><em>Let's talk.</em></h2><p>Whether it's a Next.js role, an interesting product challenge, or just a good conversation — I'd love to hear from you.</p><div class="contact-buttons"><a class="button button-primary" href="mailto:kartikeys43@gmail.com">Send an email <span>↗</span></a><button type="button" class="button button-secondary" id="copy-email" data-email="kartikeys43@gmail.com" aria-label="Copy email address">Copy my email <span>⧉</span></button></div></div><div class="contact-side reveal"><div class="contact-card"><span>CONTACT</span><a href="mailto:kartikeys43@gmail.com">kartikeys43@gmail.com <span>↗</span></a><div class="contact-divider"></div><span>LOCATION</span><strong>Ahmedabad, Gujarat, India</strong><div class="contact-divider"></div><span>FIND ME</span><a href="https://github.com/007kart" target="_blank" rel="noreferrer">GitHub / 007kart <span>↗</span></a></div><div class="contact-stamp">OPEN TO THE NEXT<br>INTERESTING THING <span>✳</span></div></div></section>
   </main>
-  <footer class="footer"><div class="container footer-inner"><span><strong>Kartikey Sharma</strong> / Full Stack Developer</span><span>Designed &amp; built with care · <span id="year">2026</span></span><a href="#top">Back to top ↑</a></div></footer>
+  <footer class="site-footer"><div class="container footer-grid"><div class="footer-identity"><span class="footer-mark">K<span>.</span></span><p>Crafted with care, code and a little curiosity.</p></div><div class="footer-links"><a href="#top">Back to top ↑</a><a href="./resume.pdf" target="_blank" rel="noreferrer">Resume ↗</a><a href="https://github.com/007kart" target="_blank" rel="noreferrer">GitHub ↗</a></div><div class="copyright">© <span id="year">2026</span> Kartikey Sharma</div></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./script.js" defer></script>
 </body>
 </html>
