@@ -8,16 +8,16 @@ A handcrafted editorial-style **light-theme developer portfolio** in plain HTML,
 
 - Responsive portfolio with custom hero, product mockups, professional timeline and accessibility-conscious motion
 - Keyboard-accessible, deep-linkable project selector modal
-- **Two interactive browser previews:** sales analytics and ERP inventory; data persists in the current browser through localStorage
-- A third AI Document Assistant (source-only prototype)
-- Downloadable resume PDF
+- **Three interactive browser previews:** E-Commerce and ERP use synthetic data and browser localStorage; the AI preview uses local keyword-based document retrieval
+- Real AI Document Assistant source uses Next.js + FastAPI + PostgreSQL/pgvector and an OpenAI API key
+- Updated ATS-readable resume in `resume.html` with print-to-PDF support
 - No JS frameworks or build tooling needed for portfolio hosting
 
 ## Important: live previews vs. full-stack deployment
 
 The demos at `/demos/ecommerce/` and `/demos/erp/` are **interactive browser-only previews using synthetic data**. CRUD operations, filters, report export and dashboard state run locally in JavaScript. They **do not call PostgreSQL**.
 
-Each linked GitHub repository contains a separate **Next.js + JavaScript + PostgreSQL** application with server-side APIs. To show recruiters a fully deployed database-backed app, that Next.js repository still needs hosting on Vercel / Railway / Render and a hosted PostgreSQL database. When deployed, update `script.js` `demo` URLs to the real application URLs; leave the GitHub `repo` URLs unchanged.
+E-Commerce and ERP linked GitHub repositories contain separate **Next.js + JavaScript + PostgreSQL** applications with server-side APIs. The AI project uses a Next.js/TypeScript frontend and a Python/FastAPI backend with pgvector. `/demos/ai/` is a keyword-search preview, not an LLM or vector retrieval deployment. To show recruiters a fully deployed database-backed app, that Next.js repository still needs hosting on Vercel / Railway / Render and a hosted PostgreSQL database. When deployed, update `script.js` `demo` URLs to the real application URLs; leave the GitHub `repo` URLs unchanged.
 
 ## Project deep links (for resume PDF)
 
@@ -47,8 +47,10 @@ Run `python3 -m http.server 8000` in this repository, then open `http://localhos
 - `index.html`, `styles.css`, `script.js`: portfolio and project selector
 - `demos/ecommerce/index.html`: CommercePulse preview
 - `demos/erp/index.html`: StockPilot preview
+- `demos/ai/index.html`: browser-only document search concept preview
 - `demo.css`, `demo.js`: shared interactive preview engine
-- `resume.pdf`: resume PDF
+- `resume.html`: current printable resume (linked by portfolio navigation)
+- `resume.pdf`: legacy archive PDF; not the current linked resume
 - `favicon.svg`: icon
 
 Everything showcased as sample data uses synthetic records; no employer or client information is included.
