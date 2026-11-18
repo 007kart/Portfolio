@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Interactive AI Document Assistant concept preview. Local keyword retrieval with sample data, no API calls.">
+<title>AI Document Assistant | Interactive Concept Preview</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#1d3234;background:#f5f6f1}
+*{box-sizing:border-box}body{margin:0}a{color:#237568}button,input,textarea{font:inherit}
+header{background:#fff;border-bottom:1px solid #dfe6dd;padding:16px 5%;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.brand{font-size:19px;font-weight:850;letter-spacing:-.7px}.brand span{color:#318572}header a{font-size:13px;font-weight:650;text-decoration:none}
+main{max-width:1140px;margin:0 auto;padding:55px 22px 80px}
+.eyebrow{font-size:11px;letter-spacing:2px;color:#248674;font-weight:800;text-transform:uppercase}
+h1{font-size:clamp(40px,6vw,72px);letter-spacing:-3px;line-height:1.02;margin:13px 0}h1 em{font-style:normal;color:#399581}
+.lede{line-height:1.8;max-width:730px;color:#697c76;font-size:16px}
+.notice{border:1px solid #e3c9a3;background:#fff9e9;padding:14px 18px;color:#806239;border-radius:12px;margin-top:22px;font-size:13px;line-height:1.6}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}.panel{background:#fff;border:1px solid #e2e8e1;border-radius:17px;padding:27px;box-shadow:0 12px 40px #244b3810}.step{font-size:11px;letter-spacing:1.6px;color:#71877c;font-weight:800}h2{font-size:24px;margin:11px 0}p{line-height:1.65}
+.field{display:block;font-size:13px;font-weight:700;margin:20px 0 7px;color:#405b52}
+textarea,input[type=file],input[type=text]{width:100%;border:1px solid #cadbd1;border-radius:9px;padding:13px;background:#fcfdfa;color:#283e38}
+textarea{min-height:158px;resize:vertical}
+button{border:0;border-radius:9px;background:#285e52;color:#fff;font-weight:800;padding:13px 19px;margin-top:15px;cursor:pointer}
+button:hover{background:#1d483f}button:focus-visible,a:focus-visible{outline:3px solid #89b5a3;outline-offset:3px}
+.secondary{background:#ecf2eb;color:#285e52;margin-left:8px}.secondary:hover{background:#dce9df}
+.muted{color:#6d8178;font-size:13px}.snippet{margin-top:15px;padding:16px;border-left:3px solid #3c9a81;background:#f3f8f4;border-radius:6px;line-height:1.8}
+.flag{font-size:11px;color:#17806a;background:#e7f7ef;padding:6px 9px;display:inline-flex;border-radius:20px;font-weight:750}.results{margin-top:23px}.results strong{display:block;margin-bottom:5px}
+footer{text-align:center;font-size:12px;color:#80938a;padding:30px}
+@media(max-width:730px){.columns{grid-template-columns:1fr}main{padding-top:35px}.panel{padding:20px}}
+</style></head><body>
+<header><div class="brand">Kartikey<span> / AI Lab</span></div><a href="../../?project=ai">← Back to portfolio</a></header>
+<main><div class="eyebrow">Project 03 / AI application engineering</div>
+<h1>Ask better<br><em>questions.</em></h1>
+<p class="lede">Explore a small document search interface. Upload a plain text note or use the sample knowledge base, then search for source-backed passages. The full project source integrates Next.js, a Python FastAPI backend, OpenAI embeddings, and PostgreSQL pgvector.</p>
+<div class="notice"><strong>Important:</strong> This page is a <strong>browser-only concept preview</strong>. Search uses simple keyword scoring, not an LLM, embeddings, semantic search, or live pgvector. Your text stays on this device. The complete AI backend requires PostgreSQL, Docker and your own OpenAI API key to run locally.</div>
+<div class="columns">
+<section class="panel"><div class="step">01 / KNOWLEDGE BASE</div><h2>Your document</h2>
+<label class="field" for="text">Document text</label>
+<textarea id="text" spellcheck="false" aria-describedby="count">Our customer support workflow prioritizes urgent billing and account access tickets. A support agent assigns tickets based on category and urgency. The team follows up with customers within one business day. All account changes require confirmation before being applied.</textarea>
+<label class="field" for="upload">Or import a local .txt file</label><input id="upload" type="file" accept=".txt,text/plain"><p class="muted" id="count">Edit the sample or import a text note (max 1 MB).</p>
+<button id="index">Index document locally</button><button id="reset" class="secondary">Use sample</button>
+<p class="muted" id="status" role="status">Sample document ready.</p>
+</section>
+<section class="panel"><div class="step">02 / EXPLORE</div><h2>Ask a question</h2>
+<label class="field" for="question">Your question</label>
+<input type="text" id="question" value="How quickly do support agents follow up?" maxlength="250">
+<button id="ask">Find related passages</button>
+<div class="results" aria-live="polite" id="results"><p class="muted">Run a search to view matching document passages.</p></div>
+</section>
+</div><p class="muted" style="margin-top:22px">Want to see the complete working API? <a href="https://github.com/007kart/ai-document-assistant" target="_blank" rel="noopener noreferrer">View the full-stack RAG repository ↗</a></p></main>
+<footer>Independent portfolio concept preview · Synthetic sample data · No hosted LLM connection</footer>
+<script>
+(()=>{'use strict';
+const $=x=>document.getElementById(x);
+const sample=$('text').value;
+let passages=[];
+const words=s=>new Set((s.toLowerCase().match(/[a-z]{3,}/g)||[]).filter(w=>!['the','are','and','with','from','that','this','your','what','how','when','does','have','their','into','they','will','within'].includes(w)));
+function index(){
+ const t=$('text').value.trim().slice(0,100000);
+ passages=t.match(/[^.!?]+[.!?]?/g)?.map(s=>s.trim()).filter(Boolean)||[];
+ $('status').textContent=passages.length+' source passages indexed locally.';
+ $('results').replaceChildren(document.createElement('p'));
+ $('results').firstChild.className='muted';$('results').firstChild.textContent='Indexed. Ask a question to search.';
+}
+$('index').addEventListener('click',index);
+$('reset').addEventListener('click',()=>{$('text').value=sample;index()});
+$('upload').addEventListener('change',async e=>{
+ const f=e.target.files?.[0];if(!f)return;
+ if(f.size>1000000){$('status').textContent='Please choose a file smaller than 1 MB.';return}
+ try{$('text').value=await f.text();index()}catch{$('status').textContent='Could not read the file'}
+});
+$('ask').addEventListener('click',()=>{
+ const q=words($('question').value);const target=$('results');target.replaceChildren();
+ if(!q.size){target.textContent='Enter a question with some keywords.';return}
+ const matches=passages.map((part,i)=>({part,i,score:[...q].reduce((n,w)=>n+Number(words(part).has(w)),0)})).filter(v=>v.score>0).sort((a,b)=>b.score-a.score).slice(0,3);
+ if(!matches.length){target.textContent='No matching passages found. Try different keywords.';return}
+ const title=document.createElement('strong');title.textContent='Matched passages · keyword retrieval';target.append(title);
+ for(const match of matches){const article=document.createElement('div');article.className='snippet';const tag=document.createElement('span');tag.className='flag';tag.textContent='Source '+(match.i+1);const p=document.createElement('p');p.textContent=match.part;article.append(tag,p);target.append(article)}
+});
+index();
+})();
+</script></body></html>
